@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="belmoorGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880" />
+      <stop offset="50%" stop-color="#A8895C" />
+      <stop offset="100%" stop-color="#84663B" />
+    </linearGradient>
+    <linearGradient id="belmoorDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#0E0E0E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="108" fill="url(#belmoorDark)" />
+  <rect width="504" height="504" x="4" y="4" rx="104" fill="none" stroke="url(#belmoorGold)" stroke-width="3" opacity="0.35" />
+
+  <!-- Inner Architectural Frame -->
+  <rect width="420" height="420" x="46" y="46" rx="72" fill="none" stroke="url(#belmoorGold)" stroke-width="1.5" opacity="0.2" />
+
+  <!-- The Belmoor Architectural "B" Monogram & Arch -->
+  <g transform="translate(256, 256)" stroke="url(#belmoorGold)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Classical Arch Outer -->
+    <path d="M -110 130 L -110 -20 A 110 110 0 0 1 110 -20 L 110 130" stroke-width="9" />
+    
+    <!-- Arch Keystone & Apex Diamond -->
+    <polygon points="0,-145 10,-130 0,-115 -10,-130" fill="url(#belmoorGold)" stroke="none" />
+    
+    <!-- Central Monogram Stem -->
+    <line x1="-55" y1="-75" x2="-55" y2="105" stroke-width="10" />
+    <line x1="-70" y1="-75" x2="-40" y2="-75" stroke-width="7" />
+    <line x1="-70" y1="105" x2="-25" y2="105" stroke-width="7" />
+    
+    <!-- Serif Loops for 'B' & Classical Columns -->
+    <path d="M -55 -75 L 0 -75 C 40 -75 40 10 -55 10" stroke-width="8" />
+    <path d="M -55 10 L 10 10 C 55 10 55 105 -55 105" stroke-width="8" />
+    
+    <!-- Foundation Arch Bar / Plinth -->
+    <line x1="-125" y1="130" x2="125" y2="130" stroke-width="7" />
+    <line x1="-140" y1="144" x2="140" y2="144" stroke-width="3" opacity="0.6" />
+  </g>
+</svg>

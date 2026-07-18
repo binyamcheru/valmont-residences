@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --charcoal: #141414;
+  --charcoal-deep: #0D0D0D;
+  --charcoal-surface: #1A1A1A;
+  --charcoal-elevated: #222222;
+  
+  --cream: #F5F1EA;
+  --cream-muted: #A39E93;
+  --cream-subtle: #6E6961;
+  
+  --brass: #A8895C;
+  --brass-light: #C5A87B;
+  --brass-dark: #8C6F45;
+  
+  --hairline-light: rgba(245, 241, 234, 0.12);
+  --hairline-light-strong: rgba(245, 241, 234, 0.24);
+  --hairline-brass: rgba(168, 137, 92, 0.35);
+  
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-deep: var(--charcoal-deep);
+  --color-charcoal-surface: var(--charcoal-surface);
+  --color-charcoal-elevated: var(--charcoal-elevated);
+  
+  --color-cream: var(--cream);
+  --color-cream-muted: var(--cream-muted);
+  --color-cream-subtle: var(--cream-subtle);
+  
+  --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
+  --color-brass-dark: var(--brass-dark);
+  
+  --color-hairline: var(--hairline-light);
+  --color-hairline-strong: var(--hairline-light-strong);
+  --color-hairline-brass: var(--hairline-brass);
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+/* Strict Design Rule: Flat solid backgrounds and zero gradients */
+html {
+  background-color: var(--charcoal);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--charcoal);
+  color: var(--cream);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom luxury text selection */
+::selection {
+  background-color: var(--brass);
+  color: var(--charcoal-deep);
+}
+
+/* Lenis smooth scrolling standard styling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hairline utility classes */
+.hairline-b {
+  border-bottom: 1px solid var(--hairline-light);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--hairline-light);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--hairline-light);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--hairline-light);
+}
+
+.hairline-all {
+  border: 1px solid var(--hairline-light);
+}
+
+.hairline-brass-b {
+  border-bottom: 1px solid var(--hairline-brass);
+}
+
+/* Reduced motion preference override */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
